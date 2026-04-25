@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+   <!-- START SCREEN -->
+   <section id="start-screen">
+     <h1>Dev Quiz</h1>
+     <p>Test your Developer knowledge. You have limited time for each question.</p>
+     <label for="topic">Choose Topic:</label>
+<select id="topic">
+  <option value="html">HTML</option>
+  <option value="css">CSS</option>
+  <option value="js">JavaScript</option>
+</select><br>
+<label for="difficulty">Select Difficulty:</label>
+<select id="difficulty">
+  <option value="easy">Easy</option>
+  <option value="medium">Medium</option>
+  <option value="hard">Hard</option>
+</select>
+     <button id="start-btn">Start Quiz</button>
+     <p><address class="powered-by">powered by Peace Emmie Innovations</address></p>
+   </section>
+   
+   
+   <!-- QUESTION SCREEN -->
+   <section id="question-screen" class="hidden">
+     <h2>Question</h2>
+     <div class="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+    
+   
+     <p id="question-text">Question goes here</p>
+   
+     <form>
+       <fieldset>
+         <legend>Choose an answer</legend>
+   
+         <button type="button">Option 1</button>
+         <button type="button">Option 2</button>
+         <button type="button">Option 3</button>
+         <button type="button">Option 4</button>
+   
+       </fieldset>
+     </form>
+   
+     <p id="score" aria-live="polite">Score: 0</p>
+   
+     <p id="question-counter" aria-label="Question 1 of 5">
+       Question 1 of 5
+     </p>
+   
+     <time id="timer" aria-live="polite">10</time>
+     <p><address class="powered-by">powered by Peace Emmie Innovations</address></p>
+   </section>
+   
+   
+   <!-- RESULT SCREEN -->
+   <section id="result-screen" class="hidden">
+     <h2>Results</h2>
+   
+     <p id="final-score">You scored 0/5</p>
+     <p id="message"></p>
+     <p id="percentage">0%</p>
+   
+     <ul id="breakdown">
+    
+       <!-- JS will fill this -->
+     </ul>
+     <p id="high-score"></p>
+   
+     <button id="restart-btn">Restart Quiz</button>
+     <p><address class="powered-by">powered by Peace Emmie Innovations</address></p>
+   </section>
+
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>
