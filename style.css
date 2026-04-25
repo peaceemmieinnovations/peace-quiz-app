@@ -118,10 +118,25 @@ button:focus {
 }
 #breakdown li {
   background: rgba(0, 71, 151, 0.897);
-  margin: 5px 0;
+  margin: 6px 0;
   padding: 10px;
   border-radius: 10px;
-}
+  color: rgb(153, 112, 0);
+  text-align: left;
+    max-height: 250px;   /* limits height so it doesn’t overflow */
+    overflow-y: auto;    /* enables vertical scrolling */
+    padding-right: 10px;
+    padding: 10px;
+    margin: 6px 0;
+    background: rgba(255,255,255,0.08);
+    border-radius: 10px;
+  }
+  #breakdown{
+    max-height: 250px;   /* limits height so it doesn’t overflow */
+    overflow-y: auto;    /* enables vertical scrolling */
+    scrollbar-width: thin;
+  scrollbar-color: #3b82f6 transparent;
+  }
 
 /* CONTAINER */
 .container {
@@ -155,6 +170,7 @@ button:focus {
 @media (max-width: 600px) {
   section {
     padding: 18px;
+    max-height: 180px;
   }
 
   button {
